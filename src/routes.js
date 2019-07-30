@@ -1,6 +1,8 @@
-import HomePage from "./HomePage";
-import Counter from "./Counter";
-import Pet, { Dog, Cat } from "./Pets";
+import HomePage from "./homePage";
+import Tool, { Counter } from "./tools/tool";
+import Game, { ThreeDoors } from "./games/game";
+import Pet, { Dog, Cat } from "./pets/pet";
+import Other from "./others/other";
 
 const routes = [
     {
@@ -10,9 +12,28 @@ const routes = [
         breadcrumbName: 'Home'
     },
     {
-        path: '/counter',
-        component: Counter,
-        breadcrumbName: 'Counter'
+        path: '/tools',
+        component: Tool,
+        breadcrumbName: 'tools',
+        routes: [
+            {
+                path: '/tools/counter',
+                component: Counter,
+                breadcrumbName: 'Counter'
+            }
+        ]
+    },
+    {
+        path: '/games',
+        component: Game,
+        breadcrumbName: 'games',
+        routes: [
+            {
+                path: '/games/threedoors',
+                component: ThreeDoors,
+                breadcrumbName: 'ThreeDoors'
+            }
+        ]
     },
     {
         path: '/pets',
@@ -29,6 +50,13 @@ const routes = [
                 component: Cat,
                 breadcrumbName: 'Cat'
             }
+        ]
+    },
+    {
+        path: '/others',
+        component: Other,
+        breadcrumbName: 'others',
+        routes: [
         ]
     }
 ];

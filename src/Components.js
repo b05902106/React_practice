@@ -26,16 +26,57 @@ const Navbar = () => {
 
 			<div className="collapse navbar-collapse" id="navbarContent">
 				<ul className="navbar-nav">
+					{/* Home */}
 					<li className="nav-item">
 						<Link className="nav-link" to="/">
 							Home
-            </Link>
+            			</Link>
 					</li>
-					<li className="nav-item">
-						<Link className="nav-link" to="/counter">
-							counter
-            </Link>
+					{/* Tools */}
+					<li className="nav-item dropdown">
+						<Link
+							className="nav-link dropdown-toggle"
+							to="/tools"
+							id="navbarDropdownMenuLink"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Tools
+           				</Link>
+						<div
+							className="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<Link className="nav-link" to="/tools/counter">
+								counter
+            				</Link>
+						</div>
 					</li>
+					{/* Games */}
+					<li className="nav-item dropdown">
+						<Link
+							className="nav-link dropdown-toggle"
+							to="/games"
+							id="navbarDropdownMenuLink"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Games
+           				</Link>
+						<div
+							className="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
+							<Link className="nav-link" to="/games/threedoors">
+								threedoors
+							</Link>
+						</div>
+					</li>
+					{/* Pets */}
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
@@ -47,17 +88,36 @@ const Navbar = () => {
 							aria-expanded="false"
 						>
 							Pets
-            </Link>
+           				</Link>
 						<div
 							className="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink"
 						>
 							<Link className="dropdown-item" to="/pets/dog">
 								Dog
-              </Link>
+              				</Link>
 							<Link className="dropdown-item" to="/pets/cat">
 								Cat
-              </Link>
+              				</Link>
+						</div>
+					</li>
+					{/* Others */}
+					<li className="nav-item dropdown">
+						<Link
+							className="nav-link dropdown-toggle"
+							to="/others"
+							id="navbarDropdownMenuLink"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Others
+           				</Link>
+						<div
+							className="dropdown-menu"
+							aria-labelledby="navbarDropdownMenuLink"
+						>
 						</div>
 					</li>
 				</ul>

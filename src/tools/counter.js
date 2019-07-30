@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Breadcrumb } from './Components';
 
 
 const Counter = ({ location }) => {
@@ -14,9 +13,7 @@ const Counter = ({ location }) => {
 
     return (
         <div>
-            <h1>Counter</h1>
-            <Breadcrumb locationPath={location.pathname} addHomeToFirstPath={true} />
-            Counter : {count}
+            Count : {count}
             <br></br>
             <button onClick={countUp}>count++</button>
             <br></br>
