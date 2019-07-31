@@ -8,9 +8,9 @@ const Tool = ({ route, location }) => {
 
     return (
         <div>
-            <h1 className='py-3'>Tools</h1>
-
             <Breadcrumb locationPath={location.pathname} addHomeToFirstPath={true} />
+
+            <h1 className='py-3'>Tools</h1>
 
             {renderRoutes(route.routes)}
         </div>

@@ -9,9 +9,9 @@ const Pet = ({ route, location }) => {
 
     return (
         <div>
-            <h1 className='py-3'>Pets</h1>
-
             <Breadcrumb locationPath={location.pathname} addHomeToFirstPath={true} />
+
+            <h1 className='py-3'>Pets</h1>
 
             {renderRoutes(route.routes)}
         </div >

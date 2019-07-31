@@ -117,7 +117,11 @@ const Navbar = () => {
 						<div
 							className="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink"
+
 						>
+							<Link className="dropdown-item" to="/others/backgroundColorChange">
+								backgroundColorChange
+              				</Link>
 						</div>
 					</li>
 				</ul>

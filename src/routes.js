@@ -2,7 +2,7 @@ import HomePage from "./homePage";
 import Tool, { Counter } from "./tools/tool";
 import Game, { ThreeDoors } from "./games/game";
 import Pet, { Dog, Cat } from "./pets/pet";
-import Other from "./others/other";
+import Other, { BackgroundColorChange } from "./others/other";
 
 const routes = [
     {
@@ -57,6 +57,11 @@ const routes = [
         component: Other,
         breadcrumbName: 'others',
         routes: [
+            {
+                path: '/others/backgroundColorChange',
+                component: BackgroundColorChange,
+                breadcrumbName: 'BackgroundColorChange'
+            }
         ]
     }
 ];
