@@ -6,7 +6,7 @@ const Time = () => {
     setInterval((() => setTime(new Date().toLocaleString())), 1000);
 
     return (
-        <p className="py-3">The time is {time}</p>
+        <h2 className="py-3">The time is {time}</h2>
     );
 };
 
