@@ -5,17 +5,21 @@ const Counter = () => {
     document.title = "Counter";
     const [count, setCounter] = useState(0);
     const countUp = () => {
-        setCounter(count + 1);
+        //wrong
+        // setCounter(count+1);
+
+        //right
+        setCounter((count) => { return count + 1 });
     };
     const countDown = () => {
-        setCounter(count - 1)
+        setCounter((count) => { return count - 1 });
     };
 
     return (
         <div>
             Count : {count}
             <br />
-            <button onClick={() => setTimeout(() => countUp, 1000)}>count++</button>
+            <button onClick={countUp}>count++</button>
             <br />
             <button onClick={countDown}>count--</button>
             <br />
