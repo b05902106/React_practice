@@ -1,4 +1,4 @@
-import HomePage from "./homePage";
+import HomePage from "./homePages/homePage";
 import Tool, { Counter } from "./tools/tool";
 import Game, { ThreeDoors } from "./games/game";
 import Pet, { Dog, Cat } from "./pets/pet";

@@ -19,9 +19,9 @@ const Counter = () => {
         <div>
             Count : {count}
             <br />
-            <button onClick={countUp}>count++</button>
+            <button type="button" onClick={countUp}>count++</button>
             <br />
-            <button onClick={countDown}>count--</button>
+            <button type="button" onClick={countDown}>count--</button>
             <br />
         </div>
     );

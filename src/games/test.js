@@ -1,3 +1,3 @@
-const a = [1]
-
-console.log([...a, 2])
+const a = [5, 1, 3]
+console.log(a.filter(({ }, index) => { return index !== 2 }))
+console.log(a)

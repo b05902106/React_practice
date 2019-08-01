@@ -72,7 +72,7 @@ const Navbar = () => {
 							aria-labelledby="navbarDropdownMenuLink"
 						>
 							<Link className="nav-link" to="/games/threedoors">
-								threedoors
+								threeDoors
 							</Link>
 						</div>
 					</li>
@@ -94,10 +94,10 @@ const Navbar = () => {
 							aria-labelledby="navbarDropdownMenuLink"
 						>
 							<Link className="dropdown-item" to="/pets/dog">
-								Dog
+								dog
               				</Link>
 							<Link className="dropdown-item" to="/pets/cat">
-								Cat
+								cat
               				</Link>
 						</div>
 					</li>
