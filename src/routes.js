@@ -1,8 +1,8 @@
 import HomePage from "./homePages/homePage";
-import Tool, { Counter } from "./tools/tool";
-import Game, { ThreeDoors } from "./games/game";
-import Pet, { Dog, Cat } from "./pets/pet";
-import Other, { BackgroundColorChange } from "./others/other";
+import Tool, { Counter } from "./tools";
+import Game, { ThreeDoors } from "./games";
+import Pet, { Dog, Cat } from "./pets";
+import Other, { BackgroundColorChange } from "./others";
 
 const routes = [
     {

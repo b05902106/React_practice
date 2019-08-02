@@ -1,6 +1,49 @@
 import React, { useState } from "react";
 import doneIcon from "../imgs/baseline-done-24px.svg"
 
+const TodoList = () => {
+    const todoThing = [
+        {
+            value: 'react',
+            done: false
+        },
+        {
+            value: 'redux',
+            done: false
+        }
+    ]
+    const [todoItems, setTodoItems] = useState(todoThing);
+    const addItem = (text) => {
+        const newItem = {
+            index: todoItems.length + 1,
+            value: text,
+            done: false
+        }
+        setTodoItems([newItem, ...todoItems]);
+    }
+
+    const removeItem = (itemIndex) => {
+        // console.log(`removeItem Index:  ${itemIndex}`)
+        const newTodoItems = todoItems.filter((item, index) => { return index !== itemIndex });
+        setTodoItems(newTodoItems);
+        return newTodoItems;
+    }
+
+    const markTodoDone = (itemIndex) => {
+        const todoItem = { value: todoItems[itemIndex].value, done: !todoItems[itemIndex].done };
+        const newTodoItems = removeItem(itemIndex);
+        todoItem.done ? setTodoItems([...newTodoItems, todoItem]) : setTodoItems([todoItem, ...newTodoItems]);
+    }
+
+    return (
+        <div>
+            <TodoHeader />
+            <TodoListBody items={todoItems} removeItem={removeItem} markTodoDone={markTodoDone} />
+            <TodoForm addItem={addItem} />
+        </div>
+    )
+}
+
 const TodoHeader = () => {
     return (
         <h4 className="mb-3" style={{ color: "#61DAFB", margin: "0 0 0 5%" }}>Todo List</h4>
@@ -48,6 +91,7 @@ const TodoForm = ({ addItem }) => {
         if (text) {
             addItem(text);
             setText('');
+            document.getElementById('todoInput').focus();
         }
     }
 
@@ -55,56 +99,11 @@ const TodoForm = ({ addItem }) => {
 
         <form className="form-inline">
             <div className="form-group mx-sm-3 mb-2">
-                <input type="text" className="form-control" placeholder="add a new todo.." value={text} onChange={handleChange} />
+                <input type="text" id="todoInput" className="form-control" placeholder="add a new todo.." value={text} onChange={handleChange} />
             </div>
             <button type="button" className="btn btn btn-outline-info mb-2" onClick={handleClick}>Add</button>
         </form>
 
-    )
-}
-
-const TodoList = () => {
-    const todoThing = [
-        {
-            value: 'react',
-            done: false
-        },
-        {
-            value: 'redux',
-            done: false
-        }
-    ]
-    const [todoItems, setTodoItems] = useState(todoThing);
-    const addItem = (text) => {
-        const newItem = {
-            index: todoItems.length + 1,
-            value: text,
-            done: false
-        }
-        setTodoItems([newItem, ...todoItems]);
-    }
-
-    const removeItem = (itemIndex) => {
-        // console.log(`removeItem Index:  ${itemIndex}`)
-        const newTodoItems = todoItems.filter((item, index) => { return index !== itemIndex });
-        setTodoItems(newTodoItems);
-        return newTodoItems;
-    }
-
-    const markTodoDone = (itemIndex) => {
-        const todoItem = { value: todoItems[itemIndex].value, done: !todoItems[itemIndex].done };
-        const newTodoItems = removeItem(itemIndex);
-        todoItem.done ? setTodoItems([...newTodoItems, todoItem]) : setTodoItems([todoItem, ...newTodoItems]);
-    }
-
-
-
-    return (
-        <div>
-            <TodoHeader />
-            <TodoListBody items={todoItems} removeItem={removeItem} markTodoDone={markTodoDone} />
-            <TodoForm addItem={addItem} />
-        </div>
     )
 }
 
