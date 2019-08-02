@@ -1,9 +1,11 @@
-const a = [5, 1, 3]
-const obj = { a: 1, b: 2 }
-console.log(a.filter(t => t !== 1))
-console.log(a)
+import react, { useState } from 'react';
 
-console.log({ c: 3, ...obj })
+const Bigfun = () => {
 
+    const [num, setNum] = useState(0);
 
-console.log(a.slice())
+    const func = () => {
+        setNum(1)
+        console.log(num);
+    }
+}

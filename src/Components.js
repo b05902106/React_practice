@@ -74,6 +74,9 @@ const Navbar = () => {
 							<Link className="nav-link" to="/games/threedoors">
 								threeDoors
 							</Link>
+							<Link className="nav-link" to="/games/guessnumber">
+								guessnumber
+							</Link>
 						</div>
 					</li>
 					{/* Pets */}

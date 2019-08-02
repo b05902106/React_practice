@@ -71,7 +71,7 @@ const TodoListItem = ({ index, item, removeItem, markTodoDone }) => {
     }
     const itemStyle = item.done ? { color: "red", textDecoration: "line-through" } : { color: "green", textDecoration: "none" }
     return (
-        <li className="list-group-item mx-sm-3 mb-2" >
+        <li className="list-group-item mx-sm-3 mb-2">
             <div>
                 <img src={doneIcon} alt="doneIcon" onClick={onClickDone} />
                 <span style={{ fontSize: "20px", ...itemStyle }}>{item.value}</span>
@@ -101,7 +101,7 @@ const TodoForm = ({ addItem }) => {
             <div className="form-group mx-sm-3 mb-2">
                 <input type="text" id="todoInput" className="form-control" placeholder="add a new todo.." value={text} onChange={handleChange} />
             </div>
-            <button type="button" className="btn btn btn-outline-info mb-2" onClick={handleClick}>Add</button>
+            <button type="button" className="btn btn-outline-info mb-2" onClick={handleClick}>Add</button>
         </form>
 
     )

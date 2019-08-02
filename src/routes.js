@@ -1,6 +1,6 @@
 import HomePage from "./homePages/homePage";
 import Tool, { Counter } from "./tools";
-import Game, { ThreeDoors } from "./games";
+import Game, { ThreeDoors, GuessNumber } from "./games";
 import Pet, { Dog, Cat } from "./pets";
 import Other, { BackgroundColorChange } from "./others";
 
@@ -32,6 +32,11 @@ const routes = [
                 path: '/games/threedoors',
                 component: ThreeDoors,
                 breadcrumbName: 'ThreeDoors'
+            },
+            {
+                path: '/games/guessnumber',
+                component: GuessNumber,
+                breadcrumbName: 'guessnumber'
             }
         ]
     },
