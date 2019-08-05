@@ -4,66 +4,68 @@ import Game, { ThreeDoors, GuessNumber } from "./games";
 import Pet, { Dog, Cat } from "./pets";
 import Other, { BackgroundColorChange } from "./others";
 
+const HomePath = '/React_practice';
+
 const routes = [
     {
-        path: '/',
+        path: HomePath,
         component: HomePage,
         exact: true,
         breadcrumbName: 'Home'
     },
     {
-        path: '/tools',
+        path: `${HomePath}/tools`,
         component: Tool,
         breadcrumbName: 'tools',
         routes: [
             {
-                path: '/tools/counter',
+                path: `${HomePath}/tools/counter`,
                 component: Counter,
                 breadcrumbName: 'Counter'
             }
         ]
     },
     {
-        path: '/games',
+        path: `${HomePath}/games`,
         component: Game,
         breadcrumbName: 'games',
         routes: [
             {
-                path: '/games/threedoors',
+                path: `${HomePath}/games/threedoors`,
                 component: ThreeDoors,
                 breadcrumbName: 'ThreeDoors'
             },
             {
-                path: '/games/guessnumber',
+                path: `${HomePath}/games/guessnumber`,
                 component: GuessNumber,
                 breadcrumbName: 'guessnumber'
             }
         ]
     },
     {
-        path: '/pets',
+        path: `${HomePath}/pets`,
         component: Pet,
         breadcrumbName: 'pets',
         routes: [
             {
-                path: '/pets/dog',
+                path: `${HomePath}/pets/dog`,
                 component: Dog,
                 breadcrumbName: 'Dog'
             },
             {
-                path: '/pets/cat',
+                path: `${HomePath}/pets/cat`,
                 component: Cat,
                 breadcrumbName: 'Cat'
             }
         ]
     },
     {
-        path: '/others',
+        path: `${HomePath}/others`,
         component: Other,
         breadcrumbName: 'others',
         routes: [
             {
-                path: '/others/backgroundColorChange',
+                path: `${HomePath}/others/backgroundColorChange`,
                 component: BackgroundColorChange,
                 breadcrumbName: 'BackgroundColorChange'
             }

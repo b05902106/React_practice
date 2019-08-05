@@ -4,11 +4,13 @@ import logo from './logo.svg';
 import { matchRoutes } from 'react-router-config';
 import routes from './routes';
 
+const HomePath = '/React_practice'
+
 
 const Navbar = () => {
 	return (
 		<nav className="navbar navbar-expand-sm navbar-light bg-light">
-			<Link className="navbar-brand" to="/">
+			<Link className="navbar-brand" to={HomePath}>
 				<img src={logo} alt="react-router-breadcrumb" width="30" height="30" />
 			</Link>
 
@@ -28,7 +30,7 @@ const Navbar = () => {
 				<ul className="navbar-nav">
 					{/* Home */}
 					<li className="nav-item">
-						<Link className="nav-link" to="/">
+						<Link className="nav-link" to={HomePath}>
 							Home
             			</Link>
 					</li>
@@ -36,7 +38,7 @@ const Navbar = () => {
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
-							to="/tools"
+							to={`${HomePath}/tools`}
 							id="navbarDropdownMenuLink"
 							role="button"
 							data-toggle="dropdown"
@@ -49,7 +51,7 @@ const Navbar = () => {
 							className="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink"
 						>
-							<Link className="nav-link" to="/tools/counter">
+							<Link className="nav-link" to={`${HomePath}/tools/counter`}>
 								counter
             				</Link>
 						</div>
@@ -58,7 +60,7 @@ const Navbar = () => {
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
-							to="/games"
+							to={`${HomePath}/games`}
 							id="navbarDropdownMenuLink"
 							role="button"
 							data-toggle="dropdown"
@@ -71,10 +73,10 @@ const Navbar = () => {
 							className="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink"
 						>
-							<Link className="nav-link" to="/games/threedoors">
+							<Link className="nav-link" to={`${HomePath}/games/threedoors`}>
 								threeDoors
 							</Link>
-							<Link className="nav-link" to="/games/guessnumber">
+							<Link className="nav-link" to={`${HomePath}/games/guessnumber`}>
 								guessnumber
 							</Link>
 						</div>
@@ -83,7 +85,7 @@ const Navbar = () => {
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
-							to="/pets"
+							to={`${HomePath}/pets`}
 							id="navbarDropdownMenuLink"
 							role="button"
 							data-toggle="dropdown"
@@ -96,10 +98,10 @@ const Navbar = () => {
 							className="dropdown-menu"
 							aria-labelledby="navbarDropdownMenuLink"
 						>
-							<Link className="dropdown-item" to="/pets/dog">
+							<Link className="dropdown-item" to={`${HomePath}/pets/dog`}>
 								dog
               				</Link>
-							<Link className="dropdown-item" to="/pets/cat">
+							<Link className="dropdown-item" to={`${HomePath}/pets/cat`}>
 								cat
               				</Link>
 						</div>
@@ -108,7 +110,7 @@ const Navbar = () => {
 					<li className="nav-item dropdown">
 						<Link
 							className="nav-link dropdown-toggle"
-							to="/others"
+							to={`${HomePath}/others`}
 							id="navbarDropdownMenuLink"
 							role="button"
 							data-toggle="dropdown"
@@ -122,7 +124,7 @@ const Navbar = () => {
 							aria-labelledby="navbarDropdownMenuLink"
 
 						>
-							<Link className="dropdown-item" to="/others/backgroundColorChange">
+							<Link className="dropdown-item" to={`${HomePath}/others/backgroundColorChange`}>
 								backgroundColorChange
               				</Link>
 						</div>
