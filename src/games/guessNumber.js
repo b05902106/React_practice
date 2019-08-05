@@ -57,7 +57,7 @@ const GuessNumber = () => {
             <p>
                 We have selected a random number between 1 and 100.
                 <br /><br />
-                See if you can guess it in 10 turns or fewer.
+                See if you can guess it in {GAMEOVERTIME} turns or fewer.
                 <br /><br />
                 We'll tell you if your guess was too high or too low.
                 <br /><br />
