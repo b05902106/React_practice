@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d98ee1be041a10f214422507bda5f15",
+    "revision": "40659735edec157cebeba9c09431440d",
     "url": "/React_practice/index.html"
   },
   {
-    "revision": "2c9d238432917b41f9ef",
-    "url": "/React_practice/static/js/2.634742f5.chunk.js"
+    "revision": "0f61cd00bc8ee7cf3401",
+    "url": "/React_practice/static/js/2.2b4589c4.chunk.js"
   },
   {
-    "revision": "2e0be81c3b4a023a47cc",
-    "url": "/React_practice/static/js/main.263d012a.chunk.js"
+    "revision": "d9bcc1cebb5f06ece302",
+    "url": "/React_practice/static/js/main.e67f4417.chunk.js"
   },
   {
     "revision": "283161e0992e8796afc2",
@@ -37,6 +37,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "76dcedd9d0e23af86c5f6522a4a34e4f",
-    "url": "/React_practice/static/media/win.76dcedd9.jpg"
+    "url": "/React_practice/static/media/threeDoor_win.76dcedd9.jpg"
   }
 ]);
