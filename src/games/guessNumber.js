@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WIN from '../imgs/guessNumber_win.jpg';
 
 const GAMEOVERTIME = 5;
 
@@ -27,7 +28,7 @@ const GuessNumber = () => {
             }
             else if (guessCount === GAMEOVERTIME - 1) {
                 setGameover();
-                setGameInformation((gameInformation) => { return gameInformation + ' Game over. \n The answer is ' + answer })
+                setGameInformation((gameInformation) => { return ' Game over. The answer is ' + answer })
             };
 
         }
@@ -70,7 +71,8 @@ const GuessNumber = () => {
             </div>
             <p>{previousGuess}</p>
             <p>{gameInformation}</p>
-            {resetButton && <button type="button" className="btn btn-outline-warning mb-2" onClick={resetGame}>Reset</button>}
+            {gameInformation === 'Bingo!!' && <img src={WIN} alt='this is a cat.' />}
+            {resetButton && (<button type="button" className="btn btn-outline-warning mb-2" onClick={resetGame}>Reset</button>)}
         </div>
     )
 }

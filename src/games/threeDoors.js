@@ -5,7 +5,7 @@ import Door3 from '../imgs/door3.jpg';
 import Door1_f from '../imgs/door1_f.jpg';
 import Door2_f from '../imgs/door2_f.jpg';
 import Door3_f from '../imgs/door3_f.jpg';
-import Win from '../imgs/win.jpg';
+import WIN from '../imgs/threeDoor_win.jpg';
 
 const ThreeDoors = () => {
     const [answer, setAnswer] = useState(Math.floor(Math.random() * 3));
@@ -82,7 +82,7 @@ const ThreeDoors = () => {
                     <img src={door[1].state} onClick={() => changeDoor(1)} alt='door2' width='100' height='250' style={{ margin: "5% 5% 0 5%" }} />
                     <img src={door[2].state} onClick={() => changeDoor(2)} alt='door3' width='100' height='250' style={{ margin: "5% 25% 0 5%" }} />
                 </> :
-                <img src={Win} alt='win!' style={{ margin: "0 40% 0 40%" }} />
+                <img src={WIN} alt='win!' style={{ margin: "0 40% 0 40%" }} />
             }
             <br />
             {gameState === 2 ?
