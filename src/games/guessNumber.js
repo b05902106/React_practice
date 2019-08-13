@@ -21,14 +21,14 @@ const GuessNumber = () => {
             !guessCount ? setPreviousGuess(`Previous Guess: ${num}`) : setPreviousGuess(previousGuess + ` ${num}`);
             setGuessCount(guessCount + 1);
             if (num > answer) setGameInformation('Last guess was too high.');
-            else setGameInformation('Last guess was too low.');
-            if (num === answer) {
+            else if (num < answer) setGameInformation('Last guess was too low.');
+            else {
                 setGameover();
                 setGameInformation('Bingo!!');
             }
-            else if (guessCount === GAMEOVERTIME - 1) {
+            if (guessCount === GAMEOVERTIME - 1) {
                 setGameover();
-                setGameInformation((gameInformation) => { return ' Game over. The answer is ' + answer })
+                setGameInformation(() => { return ' Game over. The answer is ' + answer })
             };
 
         }

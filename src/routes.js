@@ -4,11 +4,20 @@ import Game, { ThreeDoors, GuessNumber } from "./games";
 import Pet, { Dog, Cat } from "./pets";
 import Other, { BackgroundColorChange } from "./others";
 
+// redux
+// import App from './games/guessNumber/App';
+
 const HomePath = '/React_practice';
 
 const routes = [
     {
         path: HomePath,
+        component: HomePage,
+        exact: true,
+        breadcrumbName: 'Home'
+    },
+    {
+        path: '/',
         component: HomePage,
         exact: true,
         breadcrumbName: 'Home'
