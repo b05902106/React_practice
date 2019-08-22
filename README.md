@@ -1,4 +1,10 @@
+## React Practice
+Anyone who has never made a mistake has never tried anything new. -Albert Einstein
+If you have any question or suggestion, welcome to contact me (b05902106@ntu.edu.tw)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Demo
 
 You can see my website [here](http://b05902106.github.io/React_practice)
 

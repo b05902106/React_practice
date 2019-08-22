@@ -1,6 +1,6 @@
 import HomePage from "./homePages/homePage";
 import Tool, { Counter } from "./tools";
-import Game, { ThreeDoors, GuessNumber } from "./games";
+import Game, { ThreeDoors, GuessNumber, TicTacKu } from "./games";
 import Pet, { Dog, Cat } from "./pets";
 import Other, { BackgroundColorChange } from "./others";
 
@@ -48,7 +48,12 @@ const routes = [
                 path: `${HomePath}/games/guessnumber`,
                 component: GuessNumber,
                 breadcrumbName: 'guessnumber'
-            }
+            },
+            {
+                path: `${HomePath}/games/tictacku`,
+                component: TicTacKu,
+                breadcrumbName: 'tictacku'
+            },
         ]
     },
     {

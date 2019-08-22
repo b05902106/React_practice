@@ -10,7 +10,11 @@ const TodoList = () => {
         {
             value: 'redux',
             done: false
-        }
+        },
+        {
+            value: 'Tic-Tac-Ku',
+            done: false,
+        },
     ]
     const [todoItems, setTodoItems] = useState(todoThing);
     const addItem = (text) => {

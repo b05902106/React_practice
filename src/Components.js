@@ -79,6 +79,9 @@ const Navbar = () => {
 							<Link className="nav-link" to={`${HomePath}/games/guessnumber`}>
 								guessnumber
 							</Link>
+							<Link className="nav-link" to={`${HomePath}/games/tictacku`}>
+								tictacku
+							</Link>
 						</div>
 					</li>
 					{/* Pets */}
